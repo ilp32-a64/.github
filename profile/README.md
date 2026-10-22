@@ -21,6 +21,9 @@ since 2012, Apple has shipped `arm64_32` on Apple Watch since 2018, and the RISC
 On a Cortex-A35 board, CPython 3.14 built for ILP32 uses 23–33% less memory than the LP64
 build and is 2–9% faster; armhf saves a little more memory but is 14% slower on SQLite
 ([details](https://github.com/ilp32-a64/llvm-ilp32/blob/main/docs/benchmarks.md)).
+On OpenWrt with a 150,000-domain adblock list, LuCI and a Python process, the ILP32 user space
+uses 26% less memory, leaving 9.6 MB more free on a 256 MB device
+([details](https://github.com/ilp32-a64/openwrt-ilp32#readme)).
 
 ## The Challenge
 ILP32 needs a complete ecosystem, and upstream support has stayed limited: the Linux kernel's
