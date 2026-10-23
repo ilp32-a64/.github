@@ -39,6 +39,7 @@ together, with a 64-bit `time_t` throughout.
 | [musl-ilp32](https://github.com/ilp32-a64/musl-ilp32) | musl 1.2.5 with the AArch64 ILP32 port (`aarch64_ilp32`) |
 | [llvm-ilp32](https://github.com/ilp32-a64/llvm-ilp32) | Patches that make clang 22 a working compiler for `aarch64-linux-gnu_ilp32` and `aarch64-linux-musl_ilp32`, interoperable with GCC |
 | [openwrt-ilp32](https://github.com/ilp32-a64/openwrt-ilp32) | OpenWrt 25.12 with an AArch64 ILP32 (musl) user land and ILP32 kernel |
+| [leanbian](https://github.com/ilp32-a64/leanbian) | Leanbian: ILP32 runtime packages next to the 64-bit system, compatible with *Debian* 13 (early development) |
 | [test-ilp32](https://github.com/ilp32-a64/test-ilp32) | ILP32 cross toolchains (GCC 14.3 with glibc 2.41 or musl 1.2.5), test programs and a QEMU test harness |
 
 ## Where to Start
@@ -47,6 +48,7 @@ together, with a 64-bit `time_t` throughout.
 | Try ILP32: build the toolchain and a kernel, run the tests in QEMU (glibc or musl) | [test-ilp32](https://github.com/ilp32-a64/test-ilp32) |
 | Build ILP32 user space with OpenWrt (musl) | [openwrt-ilp32](https://github.com/ilp32-a64/openwrt-ilp32) |
 | Compile with clang | [llvm-ilp32](https://github.com/ilp32-a64/llvm-ilp32) |
+| Run ILP32 programs on Debian 13 | [leanbian](https://github.com/ilp32-a64/leanbian) |
 | Use only the kernel or only a C library | [linux-ilp32](https://github.com/ilp32-a64/linux-ilp32), [glibc-ilp32](https://github.com/ilp32-a64/glibc-ilp32), [musl-ilp32](https://github.com/ilp32-a64/musl-ilp32) |
 
 ## Status
