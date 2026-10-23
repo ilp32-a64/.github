@@ -18,8 +18,8 @@ AArch64 ILP32 runs 64-bit Arm code with 32-bit `int`, `long`, and pointers:
 since 2012, Apple has shipped `arm64_32` on Apple Watch since 2018, and the RISC-V psABI has a draft
 `RV64ILP32` ABI for RV64 cores.
 
-On a Cortex-A35 board, CPython 3.14 built for ILP32 uses 23–33% less memory than the LP64
-build and is 2–9% faster; armhf saves a little more memory but is 14% slower on SQLite
+On a Cortex-A35 board, CPython 3.14 built for ILP32 uses 23–31% less memory than the LP64
+build and is 1–9% faster (all builds PIE); armhf saves a little more memory but is 14% slower on SQLite
 ([details](https://github.com/ilp32-a64/llvm-ilp32/blob/main/docs/benchmarks.md)).
 On OpenWrt with a 150,000-domain adblock list, LuCI and a Python process, the ILP32 user space
 uses 26% less memory, leaving 9.6 MB more free on a 256 MB device
