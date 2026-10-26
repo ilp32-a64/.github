@@ -18,11 +18,11 @@ AArch64 ILP32 runs 64-bit Arm code with 32-bit `int`, `long`, and pointers:
 since 2012, Apple has shipped `arm64_32` on Apple Watch since 2018, and the RISC-V psABI has a draft
 `RV64ILP32` ABI for RV64 cores.
 
-On a Cortex-A35 board, CPython 3.14 built for ILP32 uses 23–31% less memory than the LP64
-build and is 1–9% faster (all builds PIE); armhf saves a little more memory but is 14% slower on SQLite
+On a Cortex-A35 board, CPython built for ILP32 uses up to 30% less memory than the same build for
+LP64, and runs a few percent slower
 ([details](https://github.com/ilp32-a64/llvm-ilp32/blob/main/docs/benchmarks.md)).
-On OpenWrt with a 150,000-domain adblock list, LuCI and a Python process, the ILP32 user space
-uses 26% less memory, leaving 9.6 MB more free on a 256 MB device
+On OpenWrt One hardware, with a 150,000-domain adblock list, LuCI and Python, the ILP32 user space
+uses 25% less memory, leaving 8.6 MB more free
 ([details](https://github.com/ilp32-a64/openwrt-ilp32#readme)).
 
 ## The Challenge
@@ -53,7 +53,7 @@ together, with a 64-bit `time_t` throughout.
 
 ## Status
 - Tested in QEMU (Cortex-A35/A53 and `-cpu max` with PAC, BTI and SVE) with glibc 2.41, musl 1.2.5
-  and OpenWrt 25.12; ILP32 user space also runs on a Cortex-A35 board.
+  and OpenWrt 25.12; ILP32 user space also runs on a Cortex-A35 board and on the OpenWrt One.
 - GCC has no return address signing (`pac-ret`) for ILP32; clang 22 with our patches does.
 - Not built or tested for ILP32 yet: the LLVM runtimes (compiler-rt, libunwind, libc++, sanitizers)
   and language runtimes other than C, C++ and CPython (for example Java and Node.js).
